@@ -8,25 +8,27 @@ import PropTypes from 'prop-types';
 function AdditionalInfo({ id, location }) {
   return (
     <>
-      <p className={s.title}>Additional information</p>
-      <NavLink
-        className={s.link}
-        to={{
-          pathname: `/movies/${id}/cast`,
-          state: { from: location },
-        }}
-      >
-        Cast
-      </NavLink>
-      <NavLink
-        className={s.link}
-        to={{
-          pathname: `/movies/${id}/reviews`,
-          state: { from: location },
-        }}
-      >
-        Reviews
-      </NavLink>
+      <div className={s.wrapper}>
+        <p className={s.title}>Additional information</p>
+        <NavLink
+          className={s.link}
+          to={{
+            pathname: `/movies/${id}/cast`,
+            state: { from: location },
+          }}
+        >
+          Cast
+        </NavLink>
+        <NavLink
+          className={s.link}
+          to={{
+            pathname: `/movies/${id}/reviews`,
+            state: { from: location },
+          }}
+        >
+          Reviews
+        </NavLink>
+      </div>
 
       <Route exact path={routes.cast} component={MovieCast} />
       <Route exact path={routes.review} component={MovieReview} />

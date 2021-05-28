@@ -1,11 +1,12 @@
 .link {
   display: inline-block;
+  width: 105px;
   text-align: center;
   cursor: pointer;
   border: none;
   outline: none;
   padding: 10px 20px;
-  margin: 10px 0 30px 50px;
+  margin: 0 20px;
   border-radius: 5px;
   font-family: sans-serif;
   font-weight: 600;
@@ -19,7 +20,19 @@
 }
 
 .title {
-  margin: 20px 50px;
+  text-align: center;
+  margin: 20px 20px 30px;
   font-size: 20px;
   font-weight: 500;
+}
+
+.wrapper {
+  margin: 20px 20px 40px;
+  width: 300px;
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    margin: 20px auto 40px;
+  }
 }
