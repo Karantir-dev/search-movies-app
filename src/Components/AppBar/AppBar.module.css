@@ -1,0 +1,21 @@
+.link {
+  margin-right: 20px;
+  font-size: 26px;
+  font-weight: 600;
+  color: rgb(0, 0, 0);
+}
+
+.activeLink {
+  color: rgb(170, 0, 255);
+  text-decoration: underline;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 70px;
+  padding: 20px;
+  background-color: rgb(212, 168, 255);
+}

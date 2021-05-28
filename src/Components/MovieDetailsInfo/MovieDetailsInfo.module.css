@@ -1,0 +1,17 @@
+.container {
+  display: flex;
+  padding: 20px;
+}
+
+.info_wrapper {
+  margin-left: 50px;
+  max-width: 600px;
+}
+
+.title {
+  margin-bottom: 20px;
+}
+
+.subtitle {
+  margin-top: 25px;
+}
