@@ -1,1 +1,1 @@
-goit-react-hw-04-movies
+Movie search app
