@@ -1,5 +1,5 @@
 .background {
-  padding: 90px 50px 10px;
+  padding: 90px 15px 20px;
   min-height: 100vh;
   background-color: rgb(41, 41, 41);
 }
@@ -7,12 +7,12 @@
 .form {
   display: flex;
   margin: 0 auto 30px;
-  width: 400px;
+  width: 280px;
 }
 
 .input {
+  width: 100%;
   height: 30px;
-  width: 300px;
   padding: 0 15px;
   outline: none;
   border: none;
@@ -38,4 +38,14 @@
 
 .button:active {
   background-color: rgb(255, 102, 0);
+}
+
+@media screen and (min-width: 768px) {
+  .form {
+    width: 350px;
+  }
+
+  .background {
+    padding: 90px 50px 20px;
+  }
 }

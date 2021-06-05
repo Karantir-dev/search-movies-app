@@ -1,11 +1,13 @@
 import { Switch, Route } from 'react-router-dom';
 import { Suspense, lazy } from 'react';
-import routes from './routes';
 import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-import './App.css';
+
+import routes from './routes';
 import AppBar from './Components/AppBar/AppBar.js';
 import NotFoundView from './Views/NotFoundView';
+
+import 'react-toastify/dist/ReactToastify.css';
+import './App.css';
 
 const HomeView = lazy(() =>
   import('./Views/HomeView/HomeView.js' /* webpackChunkName: "home-view" */),

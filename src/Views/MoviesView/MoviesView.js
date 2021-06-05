@@ -1,6 +1,9 @@
 import { Component } from 'react';
+import { toast } from 'react-toastify';
+
 import MoviesList from '../../Components/MoviesList/MoviesList';
 import moviesListFetch from '../../services/moviesListFetch';
+
 import s from './MoviesView.module.css';
 
 class MoviesView extends Component {
@@ -22,10 +25,14 @@ class MoviesView extends Component {
     e.preventDefault();
     const { searchQuery } = this.state;
 
-    const movies = await moviesListFetch(searchQuery);
-    this.setState({ movies });
+    if (!searchQuery) {
+      toast.warn('Enter your search query');
+    } else {
+      const movies = await moviesListFetch(searchQuery);
+      this.setState({ movies });
 
-    this.props.history.push(`${this.props.match.url}?query=${searchQuery}`);
+      this.props.history.push(`${this.props.match.url}?query=${searchQuery}`);
+    }
   };
 
   onTyping = e => {
